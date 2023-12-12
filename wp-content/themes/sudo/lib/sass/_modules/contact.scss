@@ -1,0 +1,334 @@
+.Formulaires{
+    padding-bottom: 20px !important;
+}
+.Contact{
+    @include side-padding(viewport);
+    @include font-size(11);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    @include respond-to(320px){
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .contact-items{
+        @include respond-to(768px){
+            width: 100%;
+            h1,
+            form{
+                padding-left: 0;
+            }
+            &:first-of-type{
+                display: none;
+            }
+        }
+    }
+    
+    .contact-form{
+        float: none;
+        margin: 0 auto;
+        &:nth-of-type(2){
+            margin-top: 80px;
+            @include respond-to(768px){
+                margin-top: 40px;
+            }
+        }
+        @include respond-to(1100px){
+            width: 75%;
+        }
+        @include respond-to(860px){
+            width: 100%;
+        }
+    }
+
+    .marge{
+        margin-top: 30px; 
+    }
+    p{
+        @include font-size(13);
+        @include line-height(30);
+        &.note{
+            @include font-size(12);
+            padding-right: 28%;
+            color: $gris;
+            a{
+                @include ease-in-out(.2s);
+                color: rgba(0, 0, 0, .5);
+            }
+            a:hover{
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+    .tel{
+        @include font-size(20);
+        @include line-height(40);
+        text-transform: uppercase;
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+    }
+    .bouton-contour{
+        @include font-size(14);
+        border-color: $gris_fonce;
+        color: $gris_fonce;
+        margin-bottom: 45px;
+        padding: 15px 20px;
+        &:hover{
+            @include ease-in-out(.2s);
+            border: 2px solid $gris_fonce;
+            color: #fff;
+            background: $gris_fonce;
+        }
+    }
+    .form{
+        @include font-size(24);
+        @include line-height(50);
+        margin-bottom: 30px;
+        &:last-of-type{
+            display: block;
+            clear: both;
+            padding: 50px 0 30px; 
+            margin-bottom: 0;
+        }
+        @include respond-to(900px){
+            &:last-of-type{
+                padding-left: 16px;
+            }
+        }
+        @include respond-to(768px){
+            &:last-of-type{
+                padding-left: 0px;
+            }
+        }
+    }
+    form{
+        display: inline-block;
+        @include respond-to(900px){
+            padding-left: 16px;
+        }
+        @include respond-to(768px){
+            padding-left: 0;
+        }
+        label{
+            display: block;
+            padding-bottom: 8px;
+            @include font-size(14);
+        }
+        input{
+            @include border-radius(2px, 2px, 2px, 2px);
+            @include ease-in-out(.3s);
+            padding: 15px;
+            width: 100%;
+            font-family: $montserra;
+            @include font-size(13);
+            border: 1px solid $gris_article;
+            &:hover{
+                border-color: $gris_fonce;
+                @include ease-in-out(.3s);
+            }
+            &:focus{
+                border-color: $couleur_logo;
+                @include ease-in-out(.3s);
+            }
+        }
+        textarea{
+            @include border-radius(2px, 2px, 2px, 2px);
+            width: 100%;
+            padding: 15px;
+            resize: none;
+            font-family: $montserra;
+            @include font-size(13);
+            border: 1px solid $gris_article;
+            &:hover{
+                border-color: $gris_fonce;
+                @include ease-in-out(.3s);
+            }
+            &:focus{
+                border-color: $couleur_logo;
+                @include ease-in-out(.3s);
+            }
+        }
+        input[type=submit]{
+            width: 100%;
+            margin-top: 0;
+            @include font-size(14);
+            color: $gris_fonce;
+            text-align: center;
+            box-sizing: border-box;
+            @include border-radius(5px, 5px, 5px, 5px);
+            border: 2px solid $gris_fonce;
+            cursor: pointer;
+            &:hover{
+                background: $gris_fonce;
+                color: #fff;
+            }
+        }
+        .cell{
+            margin-bottom: 28px;
+            @include respond-to(900px){
+                margin-bottom: 20px;
+            }
+            @include respond-to(560px){
+                width: 100%;
+            }
+        }
+        .left{
+            padding-right: 16px;
+            @include respond-to(900px){
+                padding-right: 8px;
+            }
+            @include respond-to(560px){
+                padding-right: 0;
+            }
+        }
+        .right{
+            padding-left: 16px;
+            @include respond-to(900px){
+                padding-left: 8px;
+            }
+            @include respond-to(560px){
+                padding-left: 0;
+            }
+        }
+        .champs{
+            color: $couleur_logo;
+        }
+        .padding{
+            padding: 15px 0;
+        }
+        .bouton-contour{
+            @include border-radius(5px, 5px, 5px, 5px);
+            width: 100%;
+            margin-top: 0;
+            color: $gris_fonce;
+            text-align: center;
+            box-sizing: border-box;
+            border: 2px solid $gris_fonce;
+        }
+        
+        .contact-form{
+            float: none;
+            margin: 0 auto;
+            &:nth-of-type(2){
+                margin-top: 80px;
+                @include respond-to(768px){
+                    margin-top: 40px;
+                }
+            }
+            @include respond-to(1100px){
+                width: 75%;
+            }
+            @include respond-to(860px){
+                width: 100%;
+            }
+        }
+    
+        .select{
+            @include ease-in-out(.3s);
+            @include border-radius(2px, 2px, 2px, 2px);
+            position: relative;
+            padding: 0;
+            margin: 0;
+            border: 1px solid $gris_article;
+            overflow: hidden;
+            background-color: #fff;
+            &:hover{
+                @include ease-in-out(.3s);
+                border-color: $gris_fonce;
+                &:after{
+                    @include ease-in-out(.3s);
+                    background: $couleur_logo;
+                }
+            }
+            &:after{
+                @include ease-in-out(.3s);
+                @include transform(-50%);
+                content: "\e008";
+                font-family: "Fabricones";
+                position: absolute;
+                padding: 15px 20px;
+                top: 50%;
+                right: 0;
+                cursor: pointer;
+                pointer-events: none;
+                background: rgba(149, 214, 10, .7);
+            }
+            select{
+                padding: 15px;
+                width: 100%;
+                @include font-size(13);
+                border: none;
+                cursor: pointer;
+                box-shadow: none;
+                background-color: transparent;
+                background-image: none;
+                -webkit-appearance: none;
+                   -moz-appearance: none;
+                        appearance: none;
+                &:focus{
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ok{
+    clear: both;
+}
+div.wpcf7-response-output{
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 15px;
+    @include font-size(13);
+    border: 3px solid $couleur_logo;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+span.wpcf7-not-valid-tip{
+    display: none;
+}
+.wpcf7-not-valid{
+    background: #efefef;
+    border: 1px solid $gris_fonce !important;
+}
+form img.ajax-loader {
+  display: none !important;
+}
+.select.pro-list[disabled="disabled"],.select.pro-list:hover[disabled="disabled"]{
+    cursor: default !important;
+    border: 1px solid $gris_article;
+    &:after{
+        color: $gris_article;
+        background: rgba(149, 214, 10,0.4);
+    }
+    select{
+        cursor: default !important;
+    }
+}
+#pro-list option, #select_equipe option{
+    display: none;
+}
+#pro-list:hover:not([enabled="enabled"]){
+    cursor: default !important;  
+}
+#Map-container{
+    //@include aspect-ratio(1500, 475);
+    position: relative;
+    height: 400px;
+		padding-top:0;
+    overflow: hidden;
+    iframe{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+	@include respond-to(560px){
+		height: 275px;	
+	}
+}

@@ -1,0 +1,130 @@
+//Nos professionnels
+.Aside{
+    position: relative;
+    padding: 135px 40px;
+    @include respond-to(960px){
+        width: 100%;
+        padding: 40px 24px;
+    }
+    
+    h1{
+        @include font-size(12);
+        padding-bottom: 50px;
+        font-family: $pt-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: white;
+    }
+    h2{
+        @include font-size(12);
+        padding-bottom: 50px;
+        font-family: $pt-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: red;
+    }
+    
+    a:hover .bouton-contour{
+        color: #fff !important;
+        border-color: #fff !important;
+    }
+}
+
+.Aside-item{
+    padding: 16px;
+    padding-bottom: 24px;
+    @include border-radius(3px, 3px, 3px, 3px);
+    border: 1px solid #2b2b2b;
+    margin-bottom: 75px;
+    &:first-of-type{
+        margin-top: 75px;
+    }
+    &:last-of-type{
+        margin-bottom: 20px;
+    }
+    @include respond-to(840px){
+        width: 48%;
+        &:nth-child(-n+3){
+            margin-top: 75px;
+        }
+        &:nth-child(odd){
+            margin-left: 2%;
+        }
+        &:nth-child(even){
+            margin-right: 2%;
+        }
+    }
+    @include respond-to(560px){
+        width: 100%;
+        padding-top: 50px;
+        &:nth-child(3){
+            margin-top: 0;
+        }
+        &:nth-child(odd){
+            margin-left: 0;
+        }
+        &:nth-child(even){
+            margin-right: 0;
+        }
+    }
+}
+
+.item_img{
+    width: 100%;
+    text-align: center;
+    img{
+        margin: 0 auto;
+        margin-top: -65px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.label{
+    @include font-size(12);
+    @include line-height(18);
+    font-family: $pt-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    @include respond-to(840px){
+        margin-top: 40px;
+    }
+}
+
+.name{
+    @include font-size(16);
+    @include line-height(20);
+    font-family: $montserra;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+
+.job{
+    @include font-size(14);
+    @include line-height(18);
+    font-family: $pt-serif;
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.item_desc{
+    text-align: center;
+    a{
+        @include font-size(14);
+        @include line-height(20);
+        font-family: $montserra;
+        text-decoration: none;
+        &:hover{
+            color: white !important;
+        }
+    }
+}

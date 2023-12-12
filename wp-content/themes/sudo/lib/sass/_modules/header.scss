@@ -1,0 +1,234 @@
+.home{
+    background: $gris_fonce;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    background-size: cover;
+    @include respond-to(1150px){
+        background-size: 1150px;
+        background-position: center;
+    }
+    @include respond-to(560px){
+        background-position: 0 -55px;
+        background-size: 1000px;
+
+    }
+    @include respond-to(480px){
+        background-position: 15%;
+        background-size: 950px;
+
+    }
+    @include respond-to(320px){
+        padding-bottom: 30%;
+        background-size: 810px;
+    }
+}
+
+header{
+    @include side-padding(viewport);
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    color: white;
+    background-size: cover;
+	background-position: center center;
+    background-repeat: no-repeat;
+    @include respond-to(1024px){
+        background-size: cover;
+    }
+    @include respond-to(460px){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include respond-to(320px){
+        padding-bottom: 15%;
+    }
+    .Gradient{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 275px;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.9) 0%,rgba(255,255,255,0) 100%);
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.9) 0%,rgba(255,255,255,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#00ffffff',GradientType=0 );
+        @include respond-to(320px){
+            height: 150px;
+        }
+    }
+    .filter {
+        @include side-padding(viewport);
+        padding-top: 40px;
+        padding-bottom: 300px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba( 0, 0, 0, .4 );
+
+        @include respond-to(840px){
+            padding-bottom: 0;
+        }
+        @include respond-to(460px){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    .Menu_out {
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 999;
+    }
+    .Position{
+        position: relative;
+        padding-bottom: 25px;
+        .logo{
+            a {
+                position: relative;
+            }
+            @include respond-to(540px){
+                width: 33.33333%;
+            }
+            @include respond-to(460px){
+                width: 50%;
+            }
+            @include respond-to(320px){
+                width: 66.66667%;
+            }
+        }
+    }
+    img{
+        width: 300px;
+    }
+    .Rendezvous{
+        font-family: $montserra;
+        p {
+            display: none;
+            float: right;
+            padding: 0;
+            font-family: $montserra;
+            @include font-size(16);
+            font-weight: bold;
+            margin-right: 25px;
+            &:first-of-type{
+                display: block;
+            }
+        }
+				a[href^='tel:'] {
+            display: block;
+            padding: 12px 0;
+            font-family: $montserra;
+            @include font-size(16);
+            @include line-height(16);
+            font-weight: bold;
+						color: rgba(255, 255, 255, .8);
+						text-decoration: none;
+						pointer-events: none;
+						@include respond-to( 900px ) {
+							pointer-events: auto;
+						}
+        }
+        a.rdv {
+            @include border-radius(5px, 5px, 5px, 5px);
+            @include font-size(11);
+            @include line-height(12);
+            @include ease-in-out(.2s);
+            float: right;
+            padding: 10px 15px 9px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid $couleur_logo;
+            color: black;
+            background-color: $couleur_logo;
+            &:hover {
+                @include ease-in-out(.2s);
+                color: $gris_fonce;
+                border: 2px solid #fff;
+                background-color: #fff;
+            }
+            .icon-arrow-right{
+                @include font-size(13);
+                padding-left: 2px;
+              	display: inline-block;
+            }
+        }
+    }
+    .Accueil{
+        @include line-height(50);
+        margin-top: 85px;
+        text-align: center;
+				
+
+
+text-shadow: rgb(3, 3, 3) 0px 0px 6px;
+        p{
+            @include font-size(16);
+            font-family: $pt-serif;
+            letter-spacing: 3px;
+						font-weight: 900;
+						
+            &:first-of-type{
+                text-transform: uppercase;
+                @include respond-to(320px){
+                    padding: 0 50px;
+                    margin-bottom: 10px;
+                    @include line-height(20);
+                }
+            }
+        }
+        h1{
+            @include font-size(70);
+            @include line-height(78);
+            margin-bottom: 30px;
+            @include respond-to(1024px){
+                @include font-size(40);
+                @include line-height(40);
+            }
+            @include respond-to(768px){
+                @include font-size(32);
+            }
+            @include respond-to(320px){
+                margin-bottom: 20px;
+                @include font-size(28);
+            }
+            span,
+            strong,
+            b{
+                color: $couleur_logo;
+            }
+        }
+			.bouton-contour{
+				background: #95d60a;
+				color: black;
+				text-shadow: none;
+				cursor: pointer;
+				&:hover{
+					background: #ffffff;
+					color: black;
+				}
+			}
+    }
+    @include respond-to(1024px){
+        img{
+            width: 160px;
+        }
+    }
+}
+
+.page{
+    padding-bottom: 300px;
+    @include respond-to(840px){
+        padding-bottom: 0;
+    }
+    &.w_filter {
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+}

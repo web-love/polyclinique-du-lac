@@ -1,0 +1,88 @@
+include "_modules/header.html"
+
+<header dkit-grid="col-12" style="background: #15160f;">
+    <div class="Gradient"></div>
+
+include "_modules/menu.html"
+
+</header>
+
+<section dkit-grid="col-12" class="Services_section Chroniques">
+    <h1 class="titre">Nous joindre</h1>
+</section>
+
+<section dkit-grid="col-12" class="Contact">
+    <div dkit-grid="grid-wrapper">
+        <div dkit-grid="col-6" class="contact-items">
+            <h1>Polyclinique du Lac</h1>
+            <p class="marge">
+               1020-F, boulevard du Lac,<br/>
+               Lac-Beauport (Québec) G3B 0W8
+            </p>
+            <p class="tel marge">Téléphone : 418 849-9566</p>
+            <p class="tel">Télécopieur : 418 849-3684</p>
+            <a href="#" class="bouton-contour">
+                Prendre un rendez-vous en ligne
+                <span class="icon-arrow-right next"></span>
+            </a>
+            
+            <h1>Horaire de la réception</h1>
+            <p class="horaire marge"><strong>Lundi :</strong> 8h à 12h / 13h30 à 20h</p>
+            <p class="horaire"><strong>Mardi :</strong> 8h à 12h / 14h à 20h30</p>
+            <p class="horaire"><strong>Mercredi :</strong> 8h à 12h / 13h30 à 20h</p>
+            <p class="horaire"><strong>Jeudi :</strong> 8h à 12h / 14h à 20h30</p>
+            <p class="horaire"><strong>Vendredi :</strong> 8h à 12h / 13h30 à 17h</p>
+            <p class="horaire"><strong>Samedi et dimanche :</strong> Fermé</p>
+            <p class="note marge">
+                Prenez note que l'horaire de certains professionnels peut être différent de celui de la réception, voir la section des <a href="#" class="underline">services offerts</a> pour plus de détails.
+            </p>
+        </div>
+        <div dkit-grid="col-6" class="contact-items">
+            <h1 class="form">Écrivez-nous</h1>
+            <form dkit-grid="col-12" action="">
+                <div dkit-grid="col-6" class="cell left">
+                    <label for="">
+                        Prénom <span class="champs">*</span>
+                    </label>
+                    <input type="text" placeholder="Votre prénom">
+                </div>
+                <div dkit-grid="col-6" class="cell right">
+                    <label for="">
+                        Nom <span class="champs">*</span>
+                    </label>
+                    <input type="text" placeholder="Votre nom">
+                </div>
+                <div dkit-grid="col-6" class="cell left">
+                    <label for="">
+                        Courriel <span class="champs">*</span>
+                    </label>
+                    <input type="text" placeholder="Ex: nom@courriel.com">
+                </div>
+                <div dkit-grid="col-6" class="cell right">
+                    <label for="">
+                        Téléphone <span class="champs">*</span>
+                    </label>
+                    <input type="text" placeholder="Ex: 555 555-1234">
+                </div>
+                <div dkit-grid="col-12" class="cell">
+                    <label for="">
+                        Message <span class="champs">*</span>
+                    </label>
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Votre message"></textarea>
+                </div>
+                <div dkit-grid="col-6" class="cell left">
+                    <label for="" class="padding">
+                        * Champs obligatoires
+                    </label>
+                </div>
+                <div dkit-grid="col-6" class="cell right">
+                   <a href="#" class="bouton-contour" type="submit">Envoyer <span class="icon-arrow-right"></span></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div dkit-grid="col-12" id="Map-container"></div>
+
+include "_modules/footer.html"

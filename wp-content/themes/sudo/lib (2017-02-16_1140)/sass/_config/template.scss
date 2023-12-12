@@ -1,0 +1,48 @@
+%clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important; 
+    }  
+
+* {
+    box-sizing: border-box;
+}
+
+.overflow-allow {
+	overflow: visible !important;
+}
+
+[dkit-grid~=grid-wrapper], [data-grid~=grid-wrapper]  {
+	max-width: $grid-max-width;
+	overflow: hidden; 
+	margin: 0 auto;
+  	@extend %clearfix;
+}
+
+@for $i from 1 through $grid-columns {
+    [dkit-grid~=col-#{$i}], [data-grid~=col-#{$i}]  { 
+        width: 100% / 12 * $i;
+        float:left;
+        box-sizing: border-box;
+    }
+}
+
+// Classes with devkit.js
+[dkit-masonry="child"], [data-masonry="child"]{
+	position: absolute;
+}
+
+[dkit-onload="fade"], [data-onload="fade"], [dkit-onload="index"], [data-onload="index"]{
+	opacity: 0;
+}

@@ -1,0 +1,67 @@
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel .caption {
+  text-align: center;
+}
+
+.Menu nav>ul {
+	text-align: right;
+}
+
+.Menu {
+	width: 75%;
+	position: static;
+}
+
+@media (max-width: 1200px) {
+	header img {
+		width: 160px;
+	}
+
+	.Menu {
+		width: 85%;
+	}
+
+	.logo {
+		width: 15%;
+	}
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}
+
+.Contact .wpcf7-form .note {
+    padding-right: 0;
+}
+
+.Contact div.wpcf7-response-output{
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 3px solid #95d60a;
+}
+
+.Contact .wpcf7-spinner {
+    display: block;
+    margin-left: auto;
+    margin: 15px 0 0 auto;
+}
+
+.Article .Galerie_roll .Photo {
+  position: static;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .Contact .write-us {
+    margin-top: 70px;
+  }
+
+  .Article .Galerie_roll .Photo {
+    width: 100%;
+  }
+}

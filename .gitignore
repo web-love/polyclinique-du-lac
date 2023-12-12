@@ -1,0 +1,13 @@
+# Global
+.env
+data
+_local_notes.txt
+_test
+_deprecate
+
+# Wordpress
+wp-content/uploads/
+wp-content/themes/sudo/node_modules/
+poly_arch.zip
+images/
+pdf/

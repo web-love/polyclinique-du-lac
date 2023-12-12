@@ -1,0 +1,319 @@
+<footer dkit-grid="col-12" class="Footer">
+   <div dkit-grid="grid-wrapper">
+        <div dkit-grid="col-4" class="footer-items">
+            <h1>Polyclinique du lac</h1>
+            <p>
+               1020-F, boulevard du Lac,<br/>
+               Lac-Beauport (Québec) G3B 0W8
+            </p>
+            <p class="footer-tel">Téléphone : 418 849-9566</p>
+            <p class="footer-tel">Télécopieur : 418 849-3684</p>
+            <a href="#" class="bouton-contour">
+                Contactez-nous
+                <span class="icon-arrow-right next"></span>
+            </a>
+            <a href="../rendez-vous.html">
+                Prendrez un rendez-vous en ligne<span class="icon-arrow-right next"></span>
+            </a>
+        </div>
+        <div dkit-grid="col-5" class="footer-items">
+            <h1>Horaire de la réception</h1>
+            <p class="horaire"><strong>Lundi :</strong> 8h à 12h / 13h30 à 20h</p>
+            <p class="horaire"><strong>Mardi :</strong> 8h à 12h / 14h à 20h30</p>
+            <p class="horaire"><strong>Mercredi :</strong> 8h à 12h / 13h30 à 20h</p>
+            <p class="horaire"><strong>Jeudi :</strong> 8h à 12h / 14h à 20h30</p>
+            <p class="horaire"><strong>Vendredi :</strong> 8h à 12h / 13h30 à 17h</p>
+            <p class="horaire"><strong>Samedi et dimanche :</strong> Fermé</p>
+            <p class="note">
+                Prenez note que l'horaire de certains professionnels peut être différent de celui de la réception, voir la section des <a href="#" class="underline">services offerts</a> pour plus de détails.
+            </p>
+        </div>
+        <div dkit-grid="col-3" class="footer-items">
+            <h1>Suivez-nous sur<br/>les réseaux sociaux !</h1>
+        
+            <a href="" class="Social">
+               <span class="social-icon">
+                   <img src="../../img/facebook.svg" onerror="../../img/facebook.png" alt="">
+               </span>
+               <span class="social-text">Facebook</span>
+            <br/>
+            </a>
+            <a href="" class="Social">
+               <span class="social-icon">
+                   <img src="../../img/linkedin.svg" onerror="../../img/linkedin.png" alt="">
+               </span>
+               <span class="social-text">Linkedin</span>
+            <br/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<section dkit-grid="col-12" class="Carousel">
+   <div class="Partner-wrapper">
+   
+        <div dkit-grid="grid-wrapper" class="ligne">
+            <h1>Nos Partenaires</h1>
+        </div>
+        
+        <div class="nav-wrap">
+
+           <div class="slider_next">
+                <span class="icon-uniE610 next"></span>
+            </div>
+
+            <div class="slider_prev">
+                <span class="icon-arrow-left3 prev"></span>
+            </div>
+
+            <div id="Partner-slider" dkit-grid="grid-wrapper" class="partenaires-carousel">
+                <div class="item">
+                    <img src="../../img/leucan.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../../img/couche_tard.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../../img/ubisoft.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../../img/leucan.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../../img/couche_tard.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../../img/ubisoft.png" alt="">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<section dkit-grid="col-12" class="Toes">
+   <div dkit-grid="col-12" class="border">
+        <div class="menu-footer">
+            <nav dkit-grid="grid-wrapper">
+               <ul>
+                    <li><a href="#">Services offerts</a></li
+                    ><li><a href="#">Notre équipe</a></li
+                    ><li><a href="#">Exercices</a></li
+                    ><li><a href="#">Chroniques</a></li
+                    ><li><a href="#">Nous joindre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div dkit-grid="col-12" class="copyright">
+        <div dkit-grid="grid-wrapper">
+            <div dkit-grid="col-6" class="copyright-items">
+                <p>
+                    © 2016 Polyclinique du Lac. Tous droits réservés.  |  <a href="" class="underline">Politique de confidentialité</a>
+                </p>
+            </div>
+            <div dkit-grid="col-6" class="copyright-items">
+               <a href="http://www.agencesudo.ca/" target="_blank">
+                    <p class="rea-sudo">
+                        Une réalisation de Sudo - Agence numérique Inc
+                    </p>
+                   <img src="../../img/logo_sudo.svg" alt="" class="logo-sudo">
+               </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+ 
+<link rel="stylesheet" href="styles/style.min.css"> 
+<link rel="stylesheet" href="styles/owl.carousel.css">
+<script src="scripts/library.min.js"></script>
+<script src="lib/js/_module/owl.carousel.min.js"></script>
+<script src="lib/js/_module/mixitup.js"></script>
+
+
+		
+<script type="text/javascript">
+$(document).ready(function(){
+    //Icone hamburger pour le menu mobile
+	$('#hamburger').click(function(){
+        $(this).stop().toggleClass('open');
+        if($(this).hasClass('open')){
+            $('body').css('overflow','hidden');
+        }else{
+            $('body').css('overflow','visible');
+        }
+	});
+    //Ouvrir le menu
+    $('#hamburger').click(function(){
+        $('.menu-mobile').stop().slideToggle();
+	});
+    //Ouvrir sous menu services
+    $('.Menu li:first-of-type').mouseover(function(){
+        $('.Sousmenu-services').stop().fadeIn(300);
+        $('.Sousmenu-equipes').stop().fadeOut(300);
+	});
+    //Refermer sous menu services
+    $('.Sousmenu-services').mouseleave(function(){
+        $('.Sousmenu-services').stop().fadeOut(300);
+	});
+    //Ouvrir sous menu equipes
+    $('.Menu li:nth-child(2)').mouseover(function(){
+        $('.Sousmenu-equipes').stop().fadeIn(300);
+        $('.Sousmenu-services').stop().fadeOut(300);
+	});
+    //Refermer sous menu equipes
+    $('.Sousmenu-equipes').mouseleave(function(){
+        $('.Sousmenu-equipes').stop().fadeOut(300);
+	});
+});
+
+//Carousel pour les partenaires
+$('.partenaires-carousel').owlCarousel({
+    loop:false,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+});
+//Carousel pour les témoignages    
+$('.temoignages-carousel').owlCarousel({
+    loop:false,
+    nav:false,
+    dotsContainer:'.Dots',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+});
+//Gestion des boutons suivants et précédents des carousel
+$('.next').click(function() {
+    $('.partenaires-carousel').trigger('next.owl.carousel', [350]);
+    $('.temoignages-carousel').trigger('next.owl.carousel', [350]);
+});
+$('.prev').click(function() {
+    $('.partenaires-carousel').trigger('prev.owl.carousel', [350]);
+    $('.temoignages-carousel').trigger('prev.owl.carousel', [350]);
+});
+    
+//Affichage des réponses quand clic sur + des questions    
+$(document).ready(function(){    
+    
+    FOLD = (function(){
+        
+        var $btnPlus = $('.icon-uni60');  
+        
+        var unfold = function(){
+            
+            if($(this).hasClass('icon-uni60')){
+                $(this).prev().slideDown();
+                $(this).removeClass('icon-uni60')
+                       .addClass('icon-uni5F');
+            } else {
+                $(this).prev().slideUp();
+                $(this).removeClass('icon-uni5F')
+                       .addClass('icon-uni60');
+            }
+        };
+        
+        return{
+            init: function(){
+                $btnPlus.on('click', unfold);
+            }
+        }
+        
+    })();
+    
+    FOLD.init();
+    
+});
+//Affiche la catégorie cliqué à la place de toutes les catégories/exercices    
+$(document).ready(function(){
+    $('.sujets').click(function() {
+        $('.types').slideToggle();
+    });
+    
+    $('.categories').on('click', function(){
+		
+        var $text = $(this).text();
+		
+        $('.sujets p').text($text);
+	});
+    
+});
+    
+//Switch de place le aside avec la section service quand la résolution égale 320px
+$(document).ready(function(){
+		
+    if($(window).width() <= 840){
+        $('.Service-container').insertBefore('.Aside');
+    }
+
+    $(window).on('resize', function(){
+        if($(window).width() <= 840){
+            $('.Service-container').insertBefore('.Aside');
+        } else {
+            $('.Service-container').insertAfter('.Aside');
+        }
+    });
+    
+    if($(window).width() <= 768){
+        $('.Article_content').insertBefore('.Photo_pro');
+    }
+
+    $(window).on('resize', function(){
+        if($(window).width() <= 768){
+            $('.Article_content').insertBefore('.Photo_pro');
+        } else {
+            $('.Article_content').insertAfter('.Photo_pro');
+        }
+    });
+    
+});
+    
+
+</script>
+
+<script>
+  function initMap() {
+    var localisation = new google.maps.LatLng(46.9362355,-71.3085442);
+    var mapDiv = document.getElementById('Map-container');
+    var mapOptions = {
+      zoom: 14,
+      center: localisation,
+      scrollwheel: false
+    }
+    var map = new google.maps.Map(document.getElementById("Map-container"), mapOptions);
+      
+    var marker = new google.maps.Marker({
+      position: localisation,
+      title: 'Polyclinique du Lac'
+    });  
+    marker.setMap(map);
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</html>

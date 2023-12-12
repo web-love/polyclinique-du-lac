@@ -1,0 +1,236 @@
+.Lightbox{
+  background-color: rgba(0, 0, 0, 0.90);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;   
+  display: none;
+  //padding-left: 24px;
+  //padding-right: 24px;
+  background-image: url('../lib/ressources/lightbox/ajax-loader.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  .Lightbox-num{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1201;
+    color: rgba(255, 255, 255, 0.58);
+    padding: 20px;
+    @include font-family(bold);
+    @include font-size(14);
+  }
+  
+  .Lightbox-close{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1201;
+    color: white;
+    padding: 16px;
+    cursor: pointer;
+    @include ease-in-out(200ms);
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+  
+  .Lightbox-wrapper{
+    max-width: 1200px;
+    
+    .Lightbox-view{
+      position: relative;
+      background-image: url('../lib/ressources/lightbox/ajax-loader.gif');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: black;
+      //border: 1px solid red;
+      opacity: 0;
+      &:hover{
+        .Lightbox-info{
+          opacity: 1;
+        }
+      }
+      
+      .image{
+        display: block;
+        opacity: 0;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* IE/Edge */
+        user-select: none;
+      }
+    }
+    
+    .Lightbox-back, .Lightbox-next {
+      position: absolute;
+      background-color: black;
+      display: none;
+      opacity: 0.5;
+      @include ease-in-out(200ms);
+      cursor: pointer;
+      &:hover{
+        opacity: 1 !important;
+      }
+      img{
+        width: 13px;
+        display: block;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* IE/Edge */
+        user-select: none;
+      }
+    }
+    
+    .Lightbox-back{
+      left: -1px;
+      padding: 12px 12px 12px 12px;
+      @include border-radius(0px, 4px, 4px, 0px);
+    }
+    
+    .Lightbox-next{
+      right: -1px;
+      padding: 12px 12px 12px 12px;
+      @include border-radius(4px, 0px, 0px, 4px);
+    }
+    
+  }
+  
+  .Lightbox-info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url('../lib/ressources/lightbox/content-tile.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    z-index: 1005;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    opacity: 0;
+    @include ease-in-out(200ms);
+    .info_wrapper{
+      .info_desc{
+        color: white;
+        text-transform: none;
+        @include font-size(14);
+        @include line-height(24);
+        @include font-family(normal);
+        padding-top: 12px;
+        padding-bottom: 24px;
+        display: block;
+      }
+      .info_title{
+        display: block;
+        color: white;
+        text-transform: none;
+        @include font-size(18);
+        @include line-height(28);
+        @include font-family(bold);
+      }
+    }
+  }
+  
+  .Lightbox-mobile{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 16px;
+    background-image: url('../lib/ressources/lightbox/content-tile.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    z-index: 1205;
+    display: none;
+    .Lightbox-nav_mobile{
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+    }
+    
+    .Lightbox-next_mobile, .Lightbox-back_mobile{
+      //position: absolute;
+      img{
+        display: block;
+      }  
+    }
+    
+    .Lightbox-next_mobile{
+      text-align: right;
+      img{
+        float: right;
+      }
+    }
+    
+    .Lightbox-menu{
+      
+      margin-top: 2px;
+      text-align: center;
+      .desc{
+        margin-left: 4px;
+        max-width: 12px;
+        vertical-align: top;
+        margin-top: 5px;
+      }
+      
+      .menu-title{
+        @include font-family(bold);
+        @include font-size(12);
+        @include line-height(24);
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+      .menu-label{
+        @include font-family(normal);
+        @include font-size(12);
+        @include line-height(24);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+      }
+    }
+    
+  }
+  
+  .Lightbox-mobile_info{
+    position: fixed;
+    background-image: url('../lib/ressources/lightbox/content-tile.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    z-index: 1200;
+    overflow-y: scroll;
+    display: none;
+    
+    .mobile_info{
+      margin-top: 72px;
+      padding-left: 18px;
+      padding-right: 18px;
+      color: white;
+      
+    }
+    span{
+      display: block;
+    }
+    .mobile_title{
+      @include font-family(bold);
+      @include font-size(18);
+      @include line-height(24);
+      margin-bottom: 12px;
+    }
+    .mobile_desc{
+      @include font-family(normal);
+      @include font-size(16);
+      @include line-height(24);
+      margin-bottom: 12px;
+    }
+  }
+  
+}

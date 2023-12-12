@@ -1,0 +1,107 @@
+/* Default custom select styles */
+div.Style_select {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;
+	background: #fff;
+	z-index: 100;
+	width: 100%;
+	max-width: 500px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.Style_select:focus {
+	outline: none; /* For better accessibility add a style for this in your skin */
+}
+
+.Style_select select {
+	display: none;
+}
+
+.Style_select span {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Placeholder and selected option */
+.Style_select > span {
+	padding-right: 3em;
+}
+
+.Style_select > span::after,
+.Style_select .Style_selected span::after {
+	speak: none;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.Style_select > span::after {
+	content: '\25BE';
+	right: 1em;
+}
+
+.Style_select .Style_selected span::after {
+	content: '\2713';
+	margin-left: 1em;
+}
+
+.Style_select.cs-active > span::after {
+	-webkit-transform: translateY(-50%) rotate(180deg);
+	transform: translateY(-50%) rotate(180deg);
+}
+
+div.cs-active {
+	z-index: 200;
+}
+
+/* Options */
+.Style_select .cs-options {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	background: #fff;
+	visibility: hidden;
+}
+
+.Style_select.cs-active .cs-options {
+	visibility: visible;
+}
+
+.Style_select ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.Style_select ul span {
+	padding: 1em;
+}
+
+.Style_select ul li.cs-focus span {
+	background-color: #ddd;
+}
+
+/* Optgroup and optgroup label */
+.Style_select li.cs-optgroup ul {
+	padding-left: 1em;
+}
+
+.Style_select li.cs-optgroup > span {
+	cursor: default;
+}

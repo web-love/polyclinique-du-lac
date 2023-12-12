@@ -1,0 +1,256 @@
+.Menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 770px;
+    @include respond-to(1024px){
+        width: 660px;
+    }
+    @include respond-to(900px){
+        width: auto;
+    }
+    #hamburger{
+        display: none;
+    }
+    nav{
+        float: right;
+        padding: 50px 0;
+        @include respond-to(1024px){
+            padding: 30px 0;
+        }
+        @include respond-to(900px){
+            display: none;
+        }
+        li{
+            position: relative;
+            @include font-size(14);
+            display: inline-block;
+            padding-left: 35px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            a{
+                color: #ffffff;
+                text-decoration: none;
+								font-weight: 900;
+            }
+            &:first-of-type{
+                padding-left: 0;
+            }
+            .triangle-services,
+            .triangle-equipe{
+                position: absolute;
+                bottom: -23px;
+                left: 50%;
+                @include transformX(-50%);
+                display: none;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 12.5px 10px 12.5px;
+                border-color: transparent transparent #ffffff transparent;
+            }
+            .triangle-equipe{
+                left: 63%;
+            }
+            @include respond-to(1024px){
+                @include font-size(10);
+                padding-left: 47.5px;
+            }
+        }
+    }
+    @include respond-to(900px){
+        #hamburger{
+            display: block;
+            width: 40px;
+            height: 45px;
+            position: relative;
+            padding: 16px 0;
+            margin-top: 18px;
+            float: right;
+            @include rotate(0);
+            @include ease-in-out(.5s);
+            cursor: pointer;
+            span{
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: #fff;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                @include rotate(0);
+                @include ease-in-out(.25s);
+                &:nth-child(1) {
+                    top: 6px;
+                }
+                &:nth-child(2),
+                &:nth-child(3){
+                    top: 16px;
+                }
+                &:nth-child(4) {
+                    top: 26px;
+                }
+            }
+            &.open{
+                span{
+                    &:nth-child(1) {
+                        top: 18px;
+                        width: 0%;
+                        left: 50%;
+                    }
+                    &:nth-child(2) {
+                        @include rotate(45);
+                    }
+                    &:nth-child(3) {
+                        @include rotate(-45);
+                    }
+                    &:nth-child(4) {
+                        top: 18px;
+                        width: 0%;
+                        left: 50%;
+                    }
+                }
+            }
+        }
+        .Rendezvous{
+            display: none;
+        }
+    }
+}
+.Sousmenu-services,
+.Sousmenu-equipes{
+    @include side-padding(viewport);
+    display: none;
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff;
+    -moz-box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    -webkit-box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    -o-box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=180, Strength=6);
+    z-index: 999;
+    @include respond-to(1024px){
+        top: 150px;
+    }
+	.ligne{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        h1{
+            &:before{
+                background: rgba(0, 0, 0, .1);
+            }
+            &:after{
+                background: rgba(0, 0, 0, .1);
+            }
+        }
+    }
+}
+.Sousmenu-services{
+    .Sousmenu-services-items{
+        @include side-padding(box);
+        position: relative;
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: $gris_fonce;
+            opacity: .7;
+            @include ease-in-out(.3s);
+            &:hover{
+                opacity: 1;
+            }
+        }
+        h2,
+        h3{
+            float: left;
+            font-weight: normal;
+        }
+        h2{
+            @include font-size(18);
+            @include line-height(20);
+        }
+        h3{
+            position: absolute;
+            top: 50%;
+            @include transform(-50%);
+            margin-left: 50px;
+            @include font-size(11);
+            @include line-height(20);
+            text-transform: uppercase;
+        }
+    }
+}
+.Sousmenu-equipes{
+    .Sousmenu-equipes-items{
+        @include side-padding(box);
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: $gris_fonce;
+            opacity: .7;
+            @include ease-in-out(.3s);
+            &:hover{
+                opacity: 1;
+            }
+        }
+        h2,
+        h3{
+            font-weight: normal;
+        }
+        h2{
+            @include font-size(11);
+            text-transform: uppercase;
+        }
+        h3{
+            @include font-size(12);
+            @include line-height(20);
+            font-family: $pt-serif;
+            color: $gris_article;
+        }
+    }
+    
+}
+.menu-mobile{
+    display: none;
+    position: absolute;
+    height: auto;
+    top: 170px;
+    left: 0;
+    z-index: 1000;
+    background: #fff;
+    -moz-box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    -webkit-box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    -o-box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    box-shadow: 0px 5px 6px 0px rgba( 0, 0, 0, .15 );
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=180, Strength=6);
+    li{
+        padding: 0 24px;
+        &:last-of-type{
+            a{
+                border-bottom: 0;
+            }
+        }
+    }
+    a{
+        display: block;
+        padding: 24px;
+        @include font-size(13);
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        color: black;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    a.tel{
+      @include font-size(18);
+      color: #95d60a;
+    }
+}
